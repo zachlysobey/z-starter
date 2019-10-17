@@ -32,6 +32,14 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 
+### `npm run precommit`
+
+Runs the tests, formatter, etc. as the git precommit hook would
+
+### `npm run prettier`
+
+Formats this project's code with 'prettier'
+
 ## Contributing
 
 See the [contributing guide][contributing]
