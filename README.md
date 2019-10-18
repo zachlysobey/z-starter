@@ -19,8 +19,11 @@ npm start
 
 -   `npm test`: runs the unit tests
 -   `npm run test:watch`: runs the unit tests in _watch-mode_
--   `npm start`: runs the app
--   `npm run precommit`: runs the tests, formatter, etc. as the git precommit hook would
+-   `npm start`: alias for `npm run build:dev`
+-   `npm run build`: alias for `npm run build:prod`
+-   `npm run build:dev`: runs the webpack build in development mode
+-   `npm run build:prod`: runs the webpack build in production mode
+-   `npm run precommit`: runs the builds, tests, formatter, etc. as the git precommit hook would
 -   `npm run prettier`: formats this project's code with 'prettier'
 
 ## Contributing
