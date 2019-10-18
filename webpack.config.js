@@ -2,7 +2,7 @@ const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-    entry: './src/main.js',
+    entry: './src/Hello.vue',
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
