@@ -8,6 +8,7 @@
     "precommit": "npm test && lint-staged",
     "prettier": "prettier --write **/*.{js,json,md,yml,yaml}"
   },
+  "private": true,
   "author": "Zach Lysobey <zach@lysobey.com> (http://zach.lysobey.com)",
   "license": "ISC",
   "devDependencies": {
