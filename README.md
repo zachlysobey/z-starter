@@ -2,25 +2,25 @@
 
 *Starter templates for various types of JavaScript / TypeScript project.*
 
-## ⚠️use the different branches here for different project types ⚠️
+## How it works
 
 Check out [this repository's branches](https://github.com/zachlysobey/z-starter/branches/all). They serve as different starter templates for different types of project.
 
 See the [network graph](https://github.com/zachlysobey/z-starter/network) to understand the relationships between differrent branches. Some serve as the base for others.
 
+The idea is that new projects can choose different branches as a starting point.
+
 ## Usage
 
-I've been using this project by adding it as a *remote* on a new git repository.
+I reccomend using the corresponding [`z-starter-cli`][cli] project to use these templates.
 
-So If I wanted to make a react app called `cat-meme-app` I would do something like:
+See the documentation [there][cli] for more detail, but usage would look something like this
 
-```
-mkdir cat-meme-app
-cd cat-meme-app
-git init
-git remote add starter git@github.com:zachlysobey/z-starter.git
-git reset --hard starter/react
-```
+1) Install the CLI: `$ npm install --global z-starter-cli`
+1) Init a new project: `$ mkdir cat-meme-app && cd cat-meme-app && git init`
+1) Run the CLI: `$ z-starter-cli`
+1) ...?
+1) Profit
 
 ## Example template (branch) commit history: [`nodejs-cli-typescript`](https://github.com/zachlysobey/z-starter/blob/nodejs-cli-typescript)
 
@@ -46,3 +46,5 @@ git reset --hard starter/react
 * 0f151b5 📝 add README.md
 * 617f525 🎉 npm init
 ```
+
+[cli]: https://github.com/zachlysobey/z-starter-cli
