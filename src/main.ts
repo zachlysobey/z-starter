@@ -2,6 +2,8 @@ import chalk from 'chalk'
 import inquirer from 'inquirer'
 import figlet from 'figlet'
 
+import * as log from './log'
+
 interface Answers {
     name: string
 }
@@ -17,19 +19,17 @@ const questions = [
         default: 'World!',
     },
 ]
-
-
 ;(async function main() {
     try {
         printAsciiArt(packageJson.name)
         const answers: Answers = await inquirer.prompt(questions)
-        console.log(`Hello, ${chalk.green(answers.name)}`)
+        log.info(`Hello, ${chalk.green(answers.name)}`)
     } catch (e) {
-        console.error('Fatal Error', e)
+        log.fatal(e)
         process.exit(1)
     }
 })()
 
 function printAsciiArt(content: string) {
-    console.log(chalk.cyan(figlet.textSync(content)))
+    log.info(chalk.cyan(figlet.textSync(content)))
 }
