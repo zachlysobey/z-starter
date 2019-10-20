@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>change-me</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+</head>
+
+<body>
+    <h1>Hello Electron!</h1>
+    <p>
+        We are using
+        <ul>
+            <li>
+                Node
+                <script>document.write(process.versions.node)</script>
+            </li>
+            <li>
+                Chrome
+                <script>document.write(process.versions.chrome)</script>
+            </li>
+            <li>
+                Electron
+                <script>document.write(process.versions.electron)</script>
+            </li>
+        </ul>
+    </p>
+</body>
+
+</html>
