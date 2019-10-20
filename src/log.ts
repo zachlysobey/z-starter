@@ -3,6 +3,8 @@ import figlet from 'figlet'
 
 type LogFunc = (...args: any[]) => void
 
+export const raw: LogFunc = console.log
+
 export const trace: LogFunc = (...args) => {
     console.log(chalk.gray.inverse('[TRACE]'), ...args)
 }
