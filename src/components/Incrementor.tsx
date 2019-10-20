@@ -1,9 +1,21 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { actions } from '../actions'
 
-function UnconnectedIncrementor({ value, increment, decrement }) {
+import { AppState } from '../store'
+import { actions } from '../actions'
+import { Dispatch } from 'redux'
+
+interface IncrementorProps {
+    value: number,
+    increment: (e: React.MouseEvent) => void,
+    decrement: (e: React.MouseEvent) => void,
+}
+function UnconnectedIncrementor({
+    value,
+    increment,
+    decrement,
+}: IncrementorProps) {
     return (
         <>
             <h1>Hello, Redux!</h1>
@@ -14,13 +26,13 @@ function UnconnectedIncrementor({ value, increment, decrement }) {
     )
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: AppState) => {
     return {
         value: state,
     }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         increment: () => dispatch(actions.increment()),
         decrement: () => dispatch(actions.decrement()),

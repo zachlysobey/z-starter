@@ -14,7 +14,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "precommit": "CI=true npm test && lint-staged",
-    "prettier": "prettier --write **/*.{js,json,md,yml,yaml}"
+    "prettier": "prettier --write **/*.{ts,tsx,js,json,md,yml,yaml}"
   },
   "eslintConfig": {
     "extends": "react-app"
