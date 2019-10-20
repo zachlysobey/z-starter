@@ -3,11 +3,21 @@
 
 import { QuestionCollection } from 'inquirer'
 
-export const questions: QuestionCollection = [
-    {
-        type: 'choose-a-branch',
-        name: 'name',
-        message: 'Who should I say hello to?',
-        default: 'World!',
-    },
-]
+import { Answers } from './answers'
+
+export const buildQuestions = ({
+    branches,
+}: {
+    branches: string[]
+}): QuestionCollection<Answers> => {
+    const questions = [
+        {
+            type: 'list',
+            name: 'branchName',
+            message: 'Select Branch',
+            default: 'master',
+            choices: branches,
+        },
+    ]
+    return questions
+}

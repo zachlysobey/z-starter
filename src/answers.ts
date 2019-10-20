@@ -1,12 +1,12 @@
 import inquirer, {
     Answers as InquirerAnswers,
-    QuestionCollection
+    QuestionCollection,
 } from 'inquirer'
 
 export interface Answers extends InquirerAnswers {
-    name: string
+    branchName: string
 }
 
-export async function getAnswers (questions: QuestionCollection) {
+export async function getAnswers(questions: QuestionCollection<Answers>) {
     return inquirer.prompt<Answers>(questions)
 }
