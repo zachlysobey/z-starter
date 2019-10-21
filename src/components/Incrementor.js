@@ -2,14 +2,23 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { actions } from '../actions'
+import LeftArrow from '@material-ui/icons/ArrowLeftOutlined'
+import RightArrow from '@material-ui/icons/ArrowRightOutlined'
 
 function UnconnectedIncrementor({ value, increment, decrement }) {
     return (
         <>
             <h1>Hello, Redux!</h1>
-            <button onClick={decrement}>-</button>
-            {value}
-            <button onClick={increment}>+</button>
+
+            <button onClick={decrement}>
+                <LeftArrow />
+            </button>
+
+            <span style={{ fontSize: '2em' }}> {value} </span>
+
+            <button onClick={increment}>
+                <RightArrow />
+            </button>
         </>
     )
 }
