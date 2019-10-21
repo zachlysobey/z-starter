@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 
 import { store } from './store'
 
-import { Incrementor } from './components/Incrementor'
+import Dashboard from './components/Dashboard'
 
 import 'typeface-roboto'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -13,7 +13,7 @@ function App() {
         <Provider store={store}>
             <CssBaseline />
             <div className="app">
-                <Incrementor />
+                <Dashboard />
             </div>
         </Provider>
     )
