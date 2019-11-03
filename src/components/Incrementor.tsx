@@ -1,15 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import LeftArrow from '@material-ui/icons/ArrowLeftOutlined'
+import RightArrow from '@material-ui/icons/ArrowRightOutlined'
 
 import { AppState } from '../store'
 import { actions } from '../actions'
 import { Dispatch } from 'redux'
 
 interface IncrementorProps {
-    value: number,
-    increment: (e: React.MouseEvent) => void,
-    decrement: (e: React.MouseEvent) => void,
+    value: number
+    increment: (e: React.MouseEvent) => void
+    decrement: (e: React.MouseEvent) => void
 }
 function UnconnectedIncrementor({
     value,
@@ -19,9 +21,16 @@ function UnconnectedIncrementor({
     return (
         <>
             <h1>Hello, Redux!</h1>
-            <button onClick={decrement}>-</button>
+
+            <button onClick={decrement}>
+                <LeftArrow />
+            </button>
+
             {value}
-            <button onClick={increment}>+</button>
+
+            <button onClick={increment}>
+                <RightArrow />
+            </button>
         </>
     )
 }
